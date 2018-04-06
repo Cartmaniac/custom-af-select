@@ -14,62 +14,112 @@
 
 	<body>
 
-		<!-- /filter-group -->
-		<div class="filter-group">
+		<!-- section -->
+		<section>
 
-			<div class="filter-item">
-				<label>Venue type</label>
-				<ul class="input-group" data-linked-name="venue-type">
-					<li>
-						<input type="checkbox" class="checkbox" id="venue-all" name="venue" data-single="true" checked>
-						<label class="checkbox" for="venue-all">all</label>
-					</li>
-					<li>
-						<input type="checkbox" class="checkbox" id="public-outdoor" name="venue">
-						<label class="checkbox" for="public-outdoor">plublic/outdoor</label>
-					</li>
-					<li>
-						<input type="checkbox" class="checkbox" id="bar" name="venue">
-						<label class="checkbox" for="bar">bar</label>
-					</li>
-					<li>
-						<input type="checkbox" class="checkbox" id="stadium" name="venue">
-						<label class="checkbox" for="stadium">stadium</label>
-					</li>
-					<li>
-						<input type="checkbox" class="checkbox" id="club" name="venue">
-						<label class="checkbox" for="club">club</label>
-					</li>
-					<li>
-						<input type="checkbox" class="checkbox" id="venue-other" name="venue">
-						<label class="checkbox" for="venue-other">other</label>
-					</li>
-					<li>
-						<input type="checkbox" class="checkbox" id="hall" name="venue">
-						<label class="checkbox" for="hall">hall</label>
-					</li>
-				</ul>
+			<h2>Basic select</h2>
 
-				<!-- custom-select -->
-				<select class="custom-select js-custom-select" data-multiple="true" data-single-unselected="Selected venues" data-linked="true" data-linked-name="venue-type" data-linked-class="input-group">
-					<option data-single="true" value="venue-all" selected>all types</option>>
-					<option value="bar">bar</option>>
-					<option value="club">club</option>>
-					<option value="hall">hall</option>>
-					<option value="public-outdoor">plublic/outdoor</option>>
-					<option value="stadium">stadium</option>>
-					<option value="venue-other">other</option>>
-				</select>
-				<!-- /custom-select -->
+			<!-- custom-select -->
+			<select class="custom-select js-custom-select">
+				<option data-single="true" value="cars-all" selected>All cars</option>
+				<option value="audi">Audi</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="ferrari">Ferrari</option>
+				<option value="ford">Ford</option>
+				<option value="mazda">Mazda</option>
+			</select>
+			<!-- /custom-select -->
 
-			</div>
+		</section>
+		<!-- /section -->
 
-		</div>
-		<!-- /filter-group -->
+		<!-- section -->
+		<section>
+
+			<h2>Basic select with placeholder</h2>
+
+			<!-- custom-select -->
+			<select class="custom-select js-custom-select" data-placeholder="Selct cars">
+				<option data-single="true" value="cars-all" selected>All cars</option>
+				<option value="audi">Audi</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="ferrari">Ferrari</option>
+				<option value="ford">Ford</option>
+				<option value="mazda">Mazda</option>
+			</select>
+			<!-- /custom-select -->
+
+		</section>
+		<!-- /section -->
+
+		<!-- section -->
+		<section>
+
+			<h2>Multiple select</h2>
+
+			<!-- custom-select -->
+			<select class="custom-select js-custom-select" data-multiple="true" data-single-unselected="Selcted cars">
+				<option data-single="true" value="cars-all" selected>All cars</option>
+				<option value="audi">Audi</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="ferrari">Ferrari</option>
+				<option value="ford">Ford</option>
+				<option value="mazda">Mazda</option>
+			</select>
+			<!-- /custom-select -->
+
+		</section>
+		<!-- /section -->
+
+		<!-- section -->
+		<section>
+
+			<label>Cars:</label>
+			<ul class="input-group" data-linked-name="cars-makes">
+				<li>
+					<input type="checkbox" class="checkbox" id="cars-all" name="cars" data-single="true" checked>
+					<label class="checkbox" for="cars-all">All cars</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="audi" name="cars">
+					<label class="checkbox" for="audi">Audi</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="mercedes" name="cars">
+					<label class="checkbox" for="mercedes">Mercedes</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="ferrari" name="cars">
+					<label class="checkbox" for="ferrari">Ferrari</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="ford" name="cars">
+					<label class="checkbox" for="ford">Ford</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="mazda" name="cars">
+					<label class="checkbox" for="mazda">Mazda</label>
+				</li>
+			</ul>
+
+			<!-- custom-select -->
+			<select class="custom-select js-custom-select" data-multiple="true" data-single-unselected="Selcted cars" data-linked="true" data-linked-name="cars-makes" data-linked-class="input-group">
+				<option data-single="true" value="cars-all" selected>All cars</option>
+				<option value="audi">Audi</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="ferrari">Ferrari</option>
+				<option value="ford">Ford</option>
+				<option value="mazda">Mazda</option>
+			</select>
+			<!-- /custom-select -->
+
+		</section>
+		<!-- /section -->
 
 	</body>
 	
 	<script src="../dist/jquery-3.3.1.min.js"></script>
+	<script src="../dist/dragscroll.min.js"></script>
 	<script src="../dist/custom-af-select.js"></script>
 	
 	<script>
