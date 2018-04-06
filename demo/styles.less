@@ -1,0 +1,143 @@
+/**------------- 5.18 Custom Select [.custom-select] -------------**/
+
+.custom-select {
+	position: relative;
+	z-index: 3;
+
+	&:before {
+		content: "";
+		height: 40px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+	}
+
+	&.open {
+
+		&:before {
+			.box-shadow(0 2px 5px rgba(0,0,0,.25));
+		}
+		
+		.custom-select-options {
+			.box-shadow(0 2px 5px rgba(0,0,0,.25));
+		}
+
+		.custom-select-selected {
+
+			&:after {
+				.rotate(180);
+			}
+		}
+	}
+	
+	.custom-select-selected {
+		.box-sizing();
+		z-index: 1;
+		height: 40px;
+		position: relative;
+		background-color: @white-dark;
+		padding: 10px 40px 10px 10px;
+		color: @text-color;
+		text-transform: uppercase;
+		font-weight: bold;
+		.font-size(14);
+		cursor: pointer;
+
+		&:after {
+			.transition(transform, 150ms, ease-out);
+			content: "\e909";
+			.font-icon;
+			.font-size(18);
+			color: @text-color;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 18px;
+			height: 18px;
+			line-height: 1;
+			display: block;
+		}
+	}
+
+	.custom-select-tags {
+		padding-top: 4px;
+		width: 100%;
+		white-space: nowrap;
+		height: 21px;
+		overflow: hidden;
+		margin: 0 -2px;
+
+		&.scroll-me {
+
+			.tag-item {
+				cursor: move;
+			}
+		}
+
+		.custom-dropdown-tags-list {
+			height: 20px;
+			white-space: nowrap;
+		}
+		
+		.tag-item {
+			position: relative;
+			display: inline-block;
+			color: @white;
+			.font-size(12);
+			padding: 4px 20px 4px 4px;
+			line-height: 1;
+			background-color: #2B2B2B;
+			text-transform: none;
+			margin: 0 2px;
+
+			&:before {
+				content: "#";
+			}
+
+			em {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 15px;
+				height: 20px;
+				background-image: url('../images/icon-x-heavy-white.svg');
+				background-repeat: no-repeat;
+				background-size: 8px;
+				background-position: left center;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.custom-select-options {
+		display: none;
+		.box-sizing();
+		width: 100%;
+		position: absolute;
+		top: 40px;
+		background-color: #FBFBFB;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 4px;
+		max-height: 200px;
+		overflow-x: visible;
+		overflow-y: auto;
+
+		li {
+			padding: 4px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: @white-dark;
+			}
+		}
+
+		.selected {
+			color: @red;
+		}
+	}
+}

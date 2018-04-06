@@ -1,0 +1,143 @@
+/**------------- 5.18 Custom Select [.custom-select] -------------**/
+.custom-select {
+  position: relative;
+  z-index: 3;
+}
+.custom-select:before {
+  content: "";
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.custom-select.open:before {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+.custom-select.open .custom-select-options {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+.custom-select.open .custom-select-selected:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.custom-select .custom-select-selected {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 1;
+  height: 40px;
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 10px 40px 10px 10px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.custom-select .custom-select-selected:after {
+  -webkit-transition: transform 150ms ease-out;
+  -webkit-transition: -webkit-transform 150ms ease-out;
+  transition: -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out;
+  transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
+  content: "\e909";
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-rendering: auto;
+  vertical-align: middle;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  line-height: 1;
+  display: block;
+}
+.custom-select .custom-select-tags {
+  padding-top: 4px;
+  width: 100%;
+  white-space: nowrap;
+  height: 21px;
+  overflow: hidden;
+  margin: 0 -2px;
+}
+.custom-select .custom-select-tags.scroll-me .tag-item {
+  cursor: move;
+}
+.custom-select .custom-select-tags .custom-dropdown-tags-list {
+  height: 20px;
+  white-space: nowrap;
+}
+.custom-select .custom-select-tags .tag-item {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  font-size: 1.2rem;
+  padding: 4px 20px 4px 4px;
+  line-height: 1;
+  background-color: #2B2B2B;
+  text-transform: none;
+  margin: 0 2px;
+}
+.custom-select .custom-select-tags .tag-item:before {
+  content: "#";
+}
+.custom-select .custom-select-tags .tag-item em {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  height: 20px;
+  background-image: url('../images/icon-x-heavy-white.svg');
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: left center;
+  cursor: pointer;
+}
+.custom-select .custom-select-options {
+  display: none;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  background-color: #FBFBFB;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 4px;
+  max-height: 200px;
+  overflow-x: visible;
+  overflow-y: auto;
+}
+.custom-select .custom-select-options li {
+  padding: 4px;
+  cursor: pointer;
+}
+.custom-select .custom-select-options li:hover {
+  background-color: #f5f5f5;
+}
+.custom-select .custom-select-options .selected {
+  color: #ff1f43;
+}
